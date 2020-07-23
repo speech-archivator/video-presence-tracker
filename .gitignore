@@ -1,0 +1,6 @@
+.idea
+dataset
+model_weights
+venv
+__pycache__
+
