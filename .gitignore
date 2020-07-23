@@ -3,6 +3,6 @@ dataset
 model_weights
 venv
 __pycache__
-/representations.txt
+/representations.pickle
 
 
