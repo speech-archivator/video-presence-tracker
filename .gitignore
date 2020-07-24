@@ -4,5 +4,6 @@ model_weights
 venv
 __pycache__
 /representations.pickle
+/video_out/
 
 
