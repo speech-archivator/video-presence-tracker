@@ -2,8 +2,8 @@
 dataset
 model_weights
 venv
-__pycache__
 /representations.pickle
+__pycache__
 /video_out/
-
-
+/api_key
+/processed_ids.pickle
