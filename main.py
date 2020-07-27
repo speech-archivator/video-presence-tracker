@@ -1,5 +1,5 @@
 """
-Script which gets YouTube channel id as an argument from console and
+A script which gets YouTube channel id as an argument from console and
 continually processes every new video uploaded to this channel.
 Example usage:
 $ python main.py --display-video --channel-id UCeY0bbntWzzVIaj2z3QigXg
