@@ -2,8 +2,8 @@
 A script which computes the reference feature vectors from the images
 within the dataset and saves them along with labels to a pickle file.
 """
-from os import listdir
-from os.path import join
+from os import listdir, makedirs
+from os.path import join, exists
 
 import cv2
 import numpy as np
@@ -16,7 +16,7 @@ if __name__ == '__main__':
     # 1) Load configuration and model
     conf = Config()
     labels, features = [], []
-    classifier_wrapper = ClassifierWrapper(conf.MODEL_PATH, labels, features)
+    classifier_wrapper = ClassifierWrapper(conf.MODEL_WEIGHTS_PATH, labels, features)
 
     # 2) Iterate through the dataset folders (the names of those folders are labels)
     for name in listdir(conf.DATASET):
@@ -49,3 +49,7 @@ if __name__ == '__main__':
 
     # 8) Save the data as a pickle file
     save_pickle(conf.REPRESENTATIONS, [labels, features])
+
+    # 9) Make sure the video dir exists
+    if not exists(conf.VIDEO_DIR):
+        makedirs(conf.VIDEO_DIR)
