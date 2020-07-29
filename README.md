@@ -1,6 +1,6 @@
 # Speech Archivator
 **Speech Archivator** deals with problems emerging from [deepfake](https://en.wikipedia.org/wiki/Deepfake) technology. 
-Advances in deepfake technology made it possible to manipulate or generate visual and audio content with a high potential to deceive.
+Advances in deepfake technology made it possible to manipulate or generate visual and audio content with a high potential to deceive (see [this](https://www.youtube.com/watch?v=cQ54GDm1eL0)).
 While this is a fascinating technology, it is also dangerous. 
 For example political powers can misuse this technology to create fake videos that are indistinguishable from the real ones. Such videos will cause false beliefs and opinions, just like typical fake news do. 
 
