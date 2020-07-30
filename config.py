@@ -35,4 +35,5 @@ class Config:
 
         # IPFS uploader constants
         # Maximum acceptable transaction size in bytes
-        self.MAX_TRANSACTION_SIZE = 10000000
+        self.MAX_VIDEO_SIZE = 2000000
+        self.IPFS_DAEMON_ADDRESS = '/ip4/127.0.0.1/tcp/5001/http'
