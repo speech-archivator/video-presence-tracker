@@ -72,3 +72,30 @@ The system uses face detection and face recognition implemented in PyTorch.
     To obtain the ```CHANNEL_ID``` go to [this site](https://socialnewsify.com/get-channel-id-by-username-youtube/)
     and enter the channel name.
     The get the YouTube API key read the Data API [documentation](https://developers.google.com/youtube/v3/getting-started). 
+    
+### Uploading to IPFS
+1. To upload the videos to IPFS install python ```ipfshttpclient``` package:
+    ```bash
+    pip install ipfshttpclient
+    ```
+
+2. Make sure IPFS is properly installed on your machine (look at [this site](https://docs.ipfs.io/install/) for installation instruction). Open a terminal window and run the IPFS daemon.
+    ```bash
+    ipfs daemon
+    ```
+   
+3. After running the previous command, you should see the IPFS daemon address. make sure it matches with the ```IPFS_DAEMON_ADDRESS``` variable in ```config.py``` file.
+
+4. And run the  ```ipfs_uploader.py```:
+    ```bash
+    python ./ipfs_uploader.py
+    ```
+    The script will periodically check for new videos every few minutes and uploads them
+    to the IPFS. Hashes of all uploaded videos will be saved in ```./video_out/uploaded_hashes.txt```.
+    
+
+### Quering data from IPFS
+- To retrieve the video from IPFS, you can use the IPFS webUI or run the following command on a Linux machine 
+    ```bash
+    ipfs cat <ipfs_hash> > <output_filename.mp4>
+    ```
